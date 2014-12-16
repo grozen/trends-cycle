@@ -17,4 +17,6 @@ class @SearchResults
           sort: 'timestamp'
           query: searchTerm
         ))
+
+      return json$: queryStream$.startsWith(['I am an initial value!'])
     )
