@@ -22,6 +22,8 @@ class @TrendsView
 
   @vrenderSearchSection: ->
     @h('section.search', {}, [
+      # TODO: I hacked cycle.js to call prevent-default when hooking up events.
+      # Do something more robust.
       @h('form#search', {'ev-submit': 'searchSubmits$'}, [
         @h('input#q', {autocomplete: 'off', name: 'query', type: 'text', placeholder: 'Add term'})
       ])

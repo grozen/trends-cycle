@@ -10,7 +10,7 @@ class @SearchResults
       queryStream$ = intent.searchRequests$.flatMap((searchTerm) ->
         Cycle.Rx.Observable.fromPromise($.getJSON(
           'https://slack.com/api/search.all',
-          token: Secrets.slackToken()
+          token: Secrets.slackToken
           highlight: 1
           count: 50
           page: 1
