@@ -7,3 +7,4 @@
 //= require_tree ./models
 //= require_tree ./intents
 //= require_tree ./views
+//= require init
