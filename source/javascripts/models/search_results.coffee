@@ -6,8 +6,8 @@ class @SearchResults
     @instance || initialize()
 
   @initialize: ->
-    @instance = Cycle.createModel(['searchRequest$'], (intent) ->
-      queryStream$ = intent.searchRequest$.flatMap((searchTerm) ->
+    @instance = Cycle.createModel(['searchRequests$'], (intent) ->
+      queryStream$ = intent.searchRequests$.flatMap((searchTerm) ->
         Cycle.Rx.Observable.fromPromise($.getJSON(
           'https://slack.com/api/search.all',
           token: Secrets.slackToken()
