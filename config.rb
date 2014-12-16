@@ -1,0 +1,1 @@
+activate :asset_hash

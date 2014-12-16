@@ -1,0 +1,30 @@
+{
+  "name": "Trends-cycle",
+  "version": "0.0.1",
+  "authors": [
+    "Guy Rozen <HolyEggplant@gmail.com>"
+  ],
+  "dependencies": {
+    "cycle": null,
+    "rxjs": null
+  },
+  "description": "Practice cycle.js by writing a trends app",
+  "main": "source/index.html.haml",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "cyclejs",
+    "trends"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "source/javascripts/vendor",
+    "test",
+    "tests"
+  ]
+}
