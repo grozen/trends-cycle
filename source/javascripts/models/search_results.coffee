@@ -19,5 +19,5 @@ class @SearchResults
         ))
       )
 
-      return json$: queryStream$.startsWith(['I am an initial value!'])
+      return json$: queryStream$.startWith(['I am an initial value!'])
     )
