@@ -28,7 +28,6 @@ GEM
       sass (>= 3.2, < 3.5)
     erubis (2.7.0)
     execjs (2.2.2)
-    ffi (1.9.6)
     ffi (1.9.6-x64-mingw32)
     haml (4.0.6)
       tilt
@@ -111,6 +110,7 @@ GEM
     uglifier (2.6.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    wdm (0.1.0)
 
 PLATFORMS
   x64-mingw32
@@ -118,3 +118,4 @@ PLATFORMS
 DEPENDENCIES
   middleman
   slim
+  wdm (>= 0.1.0)
