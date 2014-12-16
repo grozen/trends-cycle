@@ -8,6 +8,6 @@ class @TrendsIntent
   @initialize: ->
     @instance = Cycle.createIntent(['searchSubmits$'], (view) ->
       searchRequests$: view.searchSubmits$.map((event) ->
-        $(event.target).find('#q').value
+        $(event.target).find('#q').val()
       )
     )

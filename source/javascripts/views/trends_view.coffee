@@ -12,10 +12,10 @@ class @TrendsView
 
     @instance = Cycle.createView(['json$'], (model) ->
       events: ['searchSubmits$']
-      vtree$: model.json$.map((jsons) ->
+      vtree$: model.json$.map((json) ->
         me.h('.wrapper', {}, [
           me.vrenderSearchSection(),
-          me.vrenderResultSection(jsons)
+          me.vrenderResultSection(json)
         ])
       )
     )
@@ -29,5 +29,5 @@ class @TrendsView
       ])
     ])
 
-  @vrenderResultSection: (jsons) ->
-    @h('section.results', {}, @h('div', json) for json in jsons)
+  @vrenderResultSection: (json) ->
+    @h('section.results', {}, @h('div', JSON.stringify(json)))
