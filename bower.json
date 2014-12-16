@@ -6,6 +6,8 @@
   ],
   "dependencies": {
     "cycle": null,
+    "d3": null,
+    "jquery": null,
     "rxjs": null
   },
   "description": "Practice cycle.js by writing a trends app",

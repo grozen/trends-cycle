@@ -1,0 +1,51 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+body{
+  background: rgba(black, 0.8) !important;
+//  color: red;
+  font-family: Georgia;
+  color: rgba(black, 0.8);
+}
+
+fieldset{
+  border: none;
+  padding: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+  input{
+    width: 100%;
+    font-family: Georgia;
+    padding: 4px 6px;
+    font-size: inherit;
+  }
+}
+
+label{
+  display: block;
+}
+
+button{
+  width: 100%;
+  font-size: 20px;
+}
+
+.container {
+  display: block;
+  z-index: 5;
+  box-shadow: 0 10px 20px rgba(black, 0.5);
+  border: 1px solid #555;
+  width: 300px;
+  background: #fff;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  @include transform(translate(-50%, -50%));
+  padding: 30px;
+
+  h1{
+    font-family: Georgia;
+    margin: 0 0 20px 0;
+  }
+
+}
