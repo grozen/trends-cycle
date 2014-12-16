@@ -5,7 +5,7 @@ class @TrendsView
     raise "Get the instance by calling getInstance()"
 
   @getInstance: ->
-    @instance || initialize()
+    @instance || @initialize()
 
   @initialize: ->
     @instance = Cycle.createView(['json$'], (model) ->

@@ -3,7 +3,7 @@ class @TrendsIntent
     raise "Get the instance by calling getInstance()"
 
   @getInstance: ->
-    @instance || initialize()
+    @instance || @initialize()
 
   @initialize: ->
     @instance = Cycle.createIntent(['searchSubmits$'], (view) ->

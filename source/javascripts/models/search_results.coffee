@@ -3,7 +3,7 @@ class @SearchResults
     raise "Get the instance by calling getInstance()"
 
   @getInstance: ->
-    @instance || initialize()
+    @instance || @initialize()
 
   @initialize: ->
     @instance = Cycle.createModel(['searchRequests$'], (intent) ->
@@ -17,6 +17,7 @@ class @SearchResults
           sort: 'timestamp'
           query: searchTerm
         ))
+      )
 
       return json$: queryStream$.startsWith(['I am an initial value!'])
     )
