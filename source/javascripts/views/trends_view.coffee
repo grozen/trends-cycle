@@ -10,9 +10,8 @@ class @TrendsView
   @initialize: ->
     me = @
 
-    @instance = Cycle.createView(['json$'], (model) ->
-      events: ['searchSubmits$']
-      vtree$: model.json$.map((json) ->
+    @instance = Cycle.createView((model) ->
+      vtree$: model.get('json$').map((json) ->
         me.h('.wrapper', {}, [
           me.vrenderSearchSection(),
           me.vrenderResultSection(json)
@@ -24,7 +23,7 @@ class @TrendsView
     @h('section.search', {}, [
       # TODO: I hacked cycle.js to call prevent-default when hooking up events.
       # Do something more robust.
-      @h('form#search', {'ev-submit': 'searchSubmits$'}, [
+      @h('form#search', {onsubmit: 'searchSubmits$'}, [
         @h('input#q', {autocomplete: 'off', name: 'query', type: 'text', placeholder: 'Add term'})
       ])
     ])
