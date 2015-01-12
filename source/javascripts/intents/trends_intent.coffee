@@ -8,6 +8,7 @@ class @TrendsIntent
   @initialize: ->
     @instance = Cycle.createIntent((view) ->
       searchRequests$: view.get('searchSubmits$').map((event) ->
+        event.preventDefault()
         $(event.target).find('#q').val()
       )
     )
